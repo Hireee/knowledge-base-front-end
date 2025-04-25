@@ -1,0 +1,20 @@
+
+# Dependency directories
+node_modules/
+build/
+public/
+uploads/excel
+uploads/error_log
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+.DS_Store
+package-lock.json
+uploads/
+public/error_data_log/
+public/received_data_log/
+public/uploaded_files/
+/.idea
