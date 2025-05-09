@@ -5,16 +5,7 @@ const BUCKETNAME = process.env.GCP_BUCKET_NAME
 const FOLDER = process.env.FOLDER_NAME
  
 class GcpUpload {
-    public getConfig = (config: any) => {
-        return config.credentials  || defaultConfig  
-    }
-    public getStorageAccount = async (config: any) => {
-        const credentials = await this.getConfig(config)
-        return new Storage({
-            "project_id" : process.env.GCP_PROJECT_ID,
-            "credentials" : credentials
-        })
-    }
+    
     public isFileExists = async(config: any) => {
         const storage = await this.getStorageAccount(config)
         const myBucket = storage.bucket(BUCKETNAME)
